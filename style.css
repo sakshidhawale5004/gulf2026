@@ -2216,7 +2216,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 .newsletter-hero {
-    background: url("background (2).jpg") center/cover no-repeat fixed !important;
+    background: url("newsletter-bg.jpg") center/cover no-repeat fixed !important;
     position: relative;
     overflow: hidden;
 }
@@ -2279,4 +2279,22 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 /* Make sure the text on the backgrounds is visible */
 .comparables-data-section .text-white, .newsletter-hero .text-white {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Fix text color in internal hero white containers */
+.page-hero .container, .hero-banner .container, .contact-hero .container, .subscription-hero .container {
+    color: var(--text-color, #333) !important;
+}
+
+/* Ensure paragraph text specifically is dark */
+.contact-hero .container p, .page-hero .container p, .hero-banner .container p, .subscription-hero .container p {
+    color: var(--text-muted, #555) !important;
+}
+
+/* Restore layout for newsletter hero */
+.newsletter-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    border-top: 15px solid var(--primary-green);
 }
