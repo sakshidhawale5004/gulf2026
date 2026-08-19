@@ -2195,3 +2195,13 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
         line-height: 50px;
     }
 }
+
+/* REMOVED Floating Asterisk Badge as requested */
+.page-hero .container::after, .hero-banner .container::after, .contact-hero .container::after {
+    display: none !important;
+}
+
+/* Also hide the static squiggly lines since we'll use particles */
+.page-hero .container::before, .hero-banner .container::before, .contact-hero .container::before {
+    display: none !important;
+}

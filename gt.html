@@ -2089,5 +2089,46 @@ document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'f
         <link rel="stylesheet" href="/dist/v2/css-v2/generic/button-keyframes.ca2af30089c4c2cde833ced7f3ffa06b.css" media="none" integrity="sha384-TfL/xCt78ExaKKZrwXCoXMWUTAAwoH6XQ/sz2qAjQvKgWv&#x2B;qJsCM819YDSEVAVx9" crossorigin="anonymous" />
     <link rel="stylesheet" href="/dist/v2/css-v2/component/nav-v3/global-reach-v3.d54e9757e1447f6ce5c1018d93f390e4.css" media="none" integrity="sha384-Rgdkpf0kyy6iKomxRRYmztkMywwc15uSvhqBfCC6eqk/fiCMHQ/ZjHaNqtgJNaHo" crossorigin="anonymous" />
     
+
+<!-- 3D Constellation Particles Script -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var heroContainers = document.querySelectorAll('.page-hero .container, .hero-banner .container, .contact-hero .container');
+    heroContainers.forEach(function(container, index) {
+        if (container.querySelector('.particles-hero')) return; // Already added
+        var particleDiv = document.createElement('div');
+        var id = 'particles-hero-' + index;
+        particleDiv.id = id;
+        particleDiv.className = 'particles-hero';
+        particleDiv.style.position = 'absolute';
+        particleDiv.style.top = '0';
+        particleDiv.style.left = '0';
+        particleDiv.style.width = '100%';
+        particleDiv.style.height = '100%';
+        particleDiv.style.zIndex = '1';
+        particleDiv.style.pointerEvents = 'none';
+        container.insertBefore(particleDiv, container.firstChild);
+        
+        particlesJS(id, {
+          "particles": {
+            "number": {"value": 50, "density": {"enable": true, "value_area": 800}},
+            "color": {"value": "#F59A16"},
+            "shape": {"type": "circle"},
+            "opacity": {"value": 0.8, "random": true},
+            "size": {"value": 4, "random": true},
+            "line_linked": {"enable": true, "distance": 150, "color": "#F59A16", "opacity": 0.5, "width": 1.5},
+            "move": {"enable": true, "speed": 3, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false}
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {"onhover": {"enable": false}, "onclick": {"enable": false}, "resize": true}
+          },
+          "retina_detect": true
+        });
+    });
+});
+</script>
+
 </body>
 </html>
