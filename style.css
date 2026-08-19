@@ -2172,7 +2172,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 
 /* Backgrounds requested by user */
 .comparables-data-section {
-    background: url("bg.jpg") center/cover no-repeat !important;
+    background: url("background.jpg") center/cover no-repeat !important;
     position: relative;
     overflow: hidden;
 }
