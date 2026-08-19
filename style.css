@@ -1761,7 +1761,7 @@ h3, .h3 {
 
 /* Consistent Heading Colors */
 h1:not(.hero-title), h2, h3, h4, h5, h6, .title, .section-heading .title {
-    color: var(--primary-green) !important;
+    color: var(--primary-green);
 }
 .hero-title {
     color: #ffffff !important;
