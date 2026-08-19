@@ -93,22 +93,10 @@
     .contact-hero {
         position: relative;
         padding: 100px 0;
-        min-height: calc(100vh - 150px);
         display: flex;
         align-items: center;
-        color: white;
-        background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
-    .contact-hero::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: linear-gradient(to right, rgba(232, 97, 44, 0.1) 0%, rgba(232, 97, 44, 0.85) 45%, #e8612c 100%);
-        z-index: 1;
-    }
+    
     .contact-hero .container {
         position: relative;
         z-index: 2;
@@ -182,15 +170,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-6 pe-lg-5">
-                <h1 class="contact-heading text-white text-uppercase text-start">Get in touch for transfer pricing<br>guidance and GCC benchmark searches</h1>
+                <h1 class="contact-heading text-uppercase text-start" style="color: var(--primary-green-dark);">Get in touch for transfer pricing<br>guidance and GCC benchmark searches</h1>
                 
                 <div class="email-block">
                     <div class="email-icon">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="text-start">
-                        <h5 class="mb-1 text-white" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.25rem;">Email us</h5>
-                        <p class="mb-0 text-white" style="font-family: 'Inter', sans-serif;">connect@gulftp.com</p>
+                        <h5 class="mb-1 text-dark" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.25rem;">Email us</h5>
+                        <p class="mb-0 text-dark" style="font-family: 'Inter', sans-serif;">connect@gulftp.com</p>
                     </div>
                 </div>
 
@@ -199,8 +187,8 @@
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
                     <div class="text-start">
-                        <h5 class="mb-1 text-white" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.25rem;">WhatsApp us</h5>
-                        <p class="mb-0 text-white" style="font-family: 'Inter', sans-serif;">+971 581711600</p>
+                        <h5 class="mb-1 text-dark" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.25rem;">WhatsApp us</h5>
+                        <p class="mb-0 text-dark" style="font-family: 'Inter', sans-serif;">+971 581711600</p>
                     </div>
                 </div>
 
@@ -304,7 +292,7 @@
                     
                     <!-- Glowing Newsletter Signup -->
                     <div class="footer-newsletter mt-4">
-                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <h6 class="text-dark mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
                         <form class="newsletter-form position-relative">
                             <input type="email" class="form-control footer-input" placeholder="Enter your email address" name="email" required>
                             <button class="btn footer-submit-btn" type="submit">
