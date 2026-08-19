@@ -2379,3 +2379,23 @@ p {
     margin-left: 0 !important;
     text-align: left !important;
 }
+
+/* Clean up inner pages' hero sections outside the main container box */
+.page-hero, .hero-banner, .subscription-hero, .contact-hero {
+    background: #ffffff !important; /* Remove any old background images from the section */
+}
+
+/* Hide the dark green overlay on inner pages so it only affects the home page */
+.page-hero .hero-overlay, 
+.hero-banner .hero-overlay, 
+.subscription-hero .hero-overlay, 
+.contact-hero .hero-overlay {
+    display: none !important;
+}
+
+/* Ensure the inner containers stand out properly */
+.page-hero .container, .hero-banner .container, .subscription-hero .container {
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
