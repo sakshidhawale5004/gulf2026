@@ -2593,43 +2593,45 @@ p {
     overflow: hidden;
 }
 
+
 /* ==========================================================================
-   MAKE INNER HEROES FULL WIDTH AND REDUCE HEIGHT
+   BOXED INNER HEROES WITH REDUCED HEIGHT AND 20PX BORDER RADIUS
    ========================================================================== */
 
-/* Remove the boxed layout from the containers */
-.page-hero .container, .hero-banner .container, .subscription-hero .container {
-    background: transparent !important;
-    border-radius: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    box-shadow: none !important;
-    overflow: visible !important;
-}
-
-/* Apply the split background directly to the full-width section */
+/* The outer section should be clean */
 .page-hero, .hero-banner, .subscription-hero {
-    background: linear-gradient(135deg, var(--deep-teal) 50%, var(--primary-orange) 50%) !important;
-    padding: 60px 0 !important; /* Reduced height */
-    position: relative;
-    overflow: hidden !important; /* For the 3D wireframe */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff !important;
+    padding: 30px 0 !important; /* Minimal outer padding */
+    border-bottom: none !important;
 }
 
-/* Keep contact hero white as requested previously */
+/* The inner container gets the background, radius, and shape */
+.page-hero .container, .hero-banner .container, .subscription-hero .container {
+    background: linear-gradient(135deg, var(--deep-teal) 50%, var(--primary-orange) 50%) !important;
+    border-radius: 20px !important;
+    padding: 50px 5% !important; /* Reduced inner height, nice side padding */
+    margin: 0 auto !important; /* Center it */
+    position: relative;
+    overflow: hidden !important; /* Crucial for clipping the 3D wireframe corners */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    width: 90% !important; /* Proper width: a bit wider but not touching edges */
+    max-width: 1300px !important;
+}
+
+/* Ensure contact hero stays exactly as it was (clean white) */
 .contact-hero {
     background: #ffffff !important;
 }
 .contact-hero .container {
     background: transparent !important;
     box-shadow: none !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
 }
 
-/* Move the 3D wireframe to the section level so it isn't clipped weirdly */
+/* Keep the 3D wireframe positioned nicely inside the rounded box */
 .hero-3d-wireframe {
-    /* Position it near the right edge of the screen */
     right: 5% !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
@@ -2637,8 +2639,8 @@ p {
     height: 250px !important;
 }
 
-/* Adjust title sizes slightly if needed for the shorter height */
+/* Title adjustments for shorter height */
 .page-hero .container h1, .hero-banner .container .hero-title, .subscription-hero .container h1 {
     margin-bottom: 0.5rem !important;
-    font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
 }
