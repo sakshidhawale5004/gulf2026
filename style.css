@@ -20,10 +20,10 @@
     --shadow-glow-orange: 0 10px 25px -5px rgba(245, 154, 22, 0.4);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     color: var(--text-dark); /* text-dark */
     background-color: var(--bg-light);
     overflow-x: hidden;
@@ -1775,12 +1775,12 @@ h1:not(.hero-title), h2, h3, h4, h5, h6, .title, .section-heading .title {
 
 /* REDESIGN STYLES */
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     color: var(--text-dark);
 }
 
 h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
 }
 
 /* Navbar */
@@ -1792,7 +1792,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 .navbar-nav .nav-link {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     font-weight: 500;
     color: var(--primary-green-dark) !important;
     position: relative;
@@ -1837,7 +1837,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 
 /* Hero Content */
 .hero-title {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     font-weight: 700 !important;
     font-size: 60px !important;
     line-height: 1.1;
@@ -1855,7 +1855,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 .hero-badge {
     background: rgba(255, 255, 255, 0.15) !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     font-size: 13px !important;
     letter-spacing: 0.5px !important;
     padding: 6px 16px !important;
@@ -1876,7 +1876,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 .btn-conxora.btn-orange, .btn-primary {
     background-color: var(--primary-orange) !important;
     color: #fff !important;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 15px;
     padding: 15px 24px;
@@ -1904,7 +1904,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     border: 1px solid rgba(255,255,255,0.75) !important;
     color: #ffffff !important;
     background: transparent !important;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
     font-weight: 700;
     border-radius: 8px;
     padding: 15px 24px;
@@ -2120,7 +2120,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
 }
 
 /* Text Colors */
@@ -2349,4 +2349,20 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 .contact-hero .container p {
     color: #555 !important;
+}
+
+/* Typographic refinements for GT Walsheim / Geometric style */
+body {
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+}
+h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+.text-uppercase {
+    letter-spacing: 0.08em;
+}
+p {
+    margin-bottom: 1.5rem;
 }
