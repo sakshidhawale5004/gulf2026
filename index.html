@@ -620,22 +620,26 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-hero py-5 position-relative" >
-        <!-- Dark overlay for text readability -->
-        
-        <div class="container position-relative" style="z-index: 2;">
+    <section class="py-5" style="background-color: var(--bg-light);">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="text-white text-start mx-auto" style="max-width: 700px;">
-                        <h2 class="text-white mb-3" style="font-size: 2.0rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7); font-weight: 500;">Newsletter</h2>
-                        <p class="mb-4" style="font-size: 1.15rem; text-shadow: 0 1px 4px rgba(0,0,0,0.7);">Get the latest market updates.<br>Subscribe to our Newsletter today!</p>
+                    <div class="newsletter-card position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--deep-teal) 0%, #002b25 100%); border-radius: 24px; padding: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transition: transform 0.5s ease, box-shadow 0.5s ease; border: 1px solid rgba(255,255,255,0.1);">
+                        <!-- Moving 3D subtle gradient orb -->
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(245, 154, 22, 0.15) 0%, transparent 50%); animation: slowDrift 15s ease-in-out infinite; pointer-events: none;"></div>
                         
-                        <form class="newsletter-form">
-                            <div class="d-flex flex-column gap-3">
-                                <input type="email" class="form-control p-3 rounded-0 border-0" placeholder="Enter your email" name="email" required style="max-width: 600px; background: rgba(255,255,255,0.95); color: #333;">
-                                <button type="submit" class="btn rounded-0 align-self-start px-5 py-2 fw-bold text-white" style="background-color: #08664b; border: none; font-size: 1rem;">Submit</button>
+                        <div class="position-relative" style="z-index: 2;">
+                            <div class="text-white text-center mx-auto" style="max-width: 600px;">
+                                <h2 class="mb-3 text-white">Newsletter</h2>
+                                <p class="mb-4 text-white-50">Get the latest market updates.<br>Subscribe to our Newsletter today!</p>
+                                <form class="newsletter-form mx-auto" style="max-width: 500px;">
+                                    <div class="d-flex flex-column flex-sm-row gap-2">
+                                        <input type="email" class="form-control px-4 py-3 border-0" placeholder="Enter your email" style="border-radius: 50px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);" required>
+                                        <button type="submit" class="btn btn-orange px-5 py-3" style="border-radius: 50px; white-space: nowrap; box-shadow: 0 10px 20px rgba(245, 154, 22, 0.3);">Subscribe</button>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2177,16 +2177,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     overflow: hidden;
 }
 
-.newsletter-hero {
-    background: url("newsletter-bg.jpg") center/cover no-repeat fixed !important;
-    position: relative;
-    overflow: hidden;
-}
 
-/* Ensure the inner overlay doesn't darken the deep teal too much */
-.comparables-data-section > .position-absolute, .newsletter-hero > .position-absolute {
-    background-color: transparent !important;
-}
 
 /* Fix text colors in form left panels */
 .premium-left-panel h1, 
@@ -2244,12 +2235,12 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 /* Fix text color in internal hero white containers */
-.page-hero .container, .hero-banner .container, .contact-hero .container, .subscription-hero .container {
+.page-hero .container, .hero-banner .container, .subscription-hero .container {
     color: var(--text-color, #333) !important;
 }
 
 /* Ensure paragraph text specifically is dark */
-.contact-hero .container p, .page-hero .container p, .hero-banner .container p, .subscription-hero .container p {
+.page-hero .container p, .hero-banner .container p, .subscription-hero .container p {
     color: var(--text-muted, #555) !important;
 }
 
@@ -2264,7 +2255,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 /* ==========================================================================
    USER REQUEST: HALF DARK GREEN / HALF ORANGE INTERNAL HEROES
    ========================================================================== */
-.page-hero .container, .hero-banner .container, .contact-hero .container, .subscription-hero .container {
+.page-hero .container, .hero-banner .container, .subscription-hero .container {
     background: linear-gradient(135deg, var(--deep-teal) 50%, var(--primary-orange) 50%) !important;
     color: white !important;
     border: none !important;
@@ -2272,10 +2263,10 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 /* Force all text inside these half/half containers to be white */
-.page-hero .container h1, .hero-banner .container .hero-title, .contact-hero .container .contact-heading, .subscription-hero .container h1,
-.page-hero .container .breadcrumb-text, .hero-banner .container .breadcrumb-text, .contact-hero .container .breadcrumb-text, .subscription-hero .container .breadcrumb-text,
-.page-hero .container p, .hero-banner .container p, .contact-hero .container p, .subscription-hero .container p,
-.page-hero .container a, .hero-banner .container a, .contact-hero .container a, .subscription-hero .container a {
+.page-hero .container h1, .hero-banner .container .hero-title, .subscription-hero .container h1,
+.page-hero .container .breadcrumb-text, .hero-banner .container .breadcrumb-text, .subscription-hero .container .breadcrumb-text,
+.page-hero .container p, .hero-banner .container p, .subscription-hero .container p,
+.page-hero .container a, .hero-banner .container a, .subscription-hero .container a {
     color: #ffffff !important;
     text-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
 }
@@ -2341,4 +2332,21 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
       rgba(18, 102, 77, 0.50) 100%
     ) !important;
     z-index: 1 !important;
+}
+
+.contact-hero .container { background: #ffffff !important; }
+
+.newsletter-card:hover {
+    transform: translateY(-15px) perspective(1000px) rotateX(2deg);
+    box-shadow: 0 40px 60px rgba(0,0,0,0.2) !important;
+}
+
+.contact-hero .container {
+    color: #333 !important;
+}
+.contact-hero .container .contact-heading {
+    color: var(--primary-green-dark) !important;
+}
+.contact-hero .container p {
+    color: #555 !important;
 }
