@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gulfApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GulfTP - Our Data & Methodology</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    /* ── Custom Dropdown Arrow ── */
+.navbar-nav .nav-link.dropdown-toggle::after {
+    display: none;
+}
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    transition: transform 0.28s ease;
+}
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+}
+.navbar-nav .nav-item.dropdown.show > .nav-link .dd-arrow {
+    transform: rotate(180deg);
+}
+.hero-banner {
+    background: linear-gradient(rgba(10, 107, 79, 0.78), rgba(5, 55, 38, 0.92)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920') no-repeat center center / cover;
+    background-blend-mode: normal;
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-overlay { display: none; }
+.hero-content { position: relative; z-index: 2; }
+.hero-title {
+    
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+}
+.hero-breadcrumb {
+    font-size: 1rem;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+</style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="favicon-final.jpeg">
+</head>
+<body ng-controller="AboutController">
+
+    <!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div data-aos="fade-up" class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> connect@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container-fluid px-xl-5">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" style="font-weight: 600;">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">Regulation <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html">United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html">Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="kuwait-transfer-pricing.html">Kuwait</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html">Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html">Bahrain</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html">Oman</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Wider Middle East</h6></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none d-flex flex-column gap-2 mt-3 mb-2">
+                        <a href="book-search.html" class="btn-outline-green btn px-3 py-2 text-center" style="font-size: 14px;">BOOK SEARCH</a>
+                        <a href="book-a-demo.html" class="btn-orange btn px-3 py-2 text-center" style="font-size: 14px; color: white;">BOOK DEMO</a>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex gap-2">
+                    <a href="book-search.html" class="btn-outline-green btn px-3 py-2" style="font-size: 14px;">BOOK SEARCH</a>
+                    <a href="book-a-demo.html" class="btn-orange btn px-3 py-2" style="font-size: 14px; color: white;">BOOK DEMO</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section data-aos="fade-up" class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 3.8rem; line-height: 1.15;  text-transform: uppercase;">Our Data & Methodology</h1>
+            <p class="hero-breadcrumb" style="max-width: 540px; line-height: 1.7; font-family: 'Inter', sans-serif !important; font-weight: 200 !important; font-size: 1.2rem; margin: 0 auto;">Home - Our Data & Methodology</p>
+        </div>
+    </section>
+
+        <!-- Data & Methodology Content -->
+    <section class="py-5" style="background-color: var(--bg-light); position: relative;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(circle, rgba(245,145,32,0.1) 0%, rgba(255,255,255,0) 70%); z-index: 0; pointer-events: none;"></div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 500px; height: 500px; background: radial-gradient(circle, rgba(8,102,75,0.08) 0%, rgba(255,255,255,0) 70%); z-index: 0; pointer-events: none;"></div>
+
+        <div class="container position-relative z-index-1">
+            <div class="text-center mb-5">
+                <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill mb-3" style="font-weight: 600; letter-spacing: 1px;">OUR PROCESS</span>
+                <h2 class="display-5 fw-bold" style="color: var(--primary-green-dark); font-family: 'Cormorant Garamond', serif;">Data Integrity & Methodology</h2>
+                <p class="lead text-muted mx-auto mt-3" style="max-width: 700px; font-size: 1.1rem;">We employ rigorous validation, verification, and benchmarking processes to ensure that all transfer pricing data is highly accurate and regulation-compliant across the GCC.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Company Database -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-lg p-5" style="border-radius: 20px; border-top: 5px solid var(--primary-green) !important; background: white; transition: transform 0.3s ease;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <h3 class="mb-0 text-uppercase" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.6rem; color: var(--primary-green-dark);">Company Database</h3>
+                        </div>
+                        <p class="text-muted mb-4 pb-2 border-bottom">Our Company Database provides the most accurate and extensive transfer pricing data for entities operating within the GCC, ensuring full compliance with local regulations.</p>
+                        
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-satellite-dish text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Data Sourcing</h6>
+                                    <p class="text-muted small mb-0">Sourced directly from verified corporate registries, financial statements, and trusted regional partners.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-globe text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Coverage</h6>
+                                    <p class="text-muted small mb-0">Broad coverage spanning management, IT, HR, and administrative services across the region.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <i class="fa-solid fa-shield-check text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Validation Process</h6>
+                                    <p class="text-muted small mb-0">Strict filtering to guarantee true independence and functional comparability of all service providers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Royalty/IP Database -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-lg p-5" style="border-radius: 20px; border-top: 5px solid var(--primary-orange) !important; background: white; transition: transform 0.3s ease;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                            <h3 class="mb-0 text-uppercase" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.6rem; color: var(--primary-green-dark);">Royalty/IP Database</h3>
+                        </div>
+                        <p class="text-muted mb-4 pb-2 border-bottom">The Royalty/IP Database offers meticulously verified intellectual property licensing rates tailored for Middle Eastern markets.</p>
+                        
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-satellite-dish text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Data Sourcing</h6>
+                                    <p class="text-muted small mb-0">Extracted from public licensing agreements, regulatory filings, and specialized IP transaction databases.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-globe text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Coverage</h6>
+                                    <p class="text-muted small mb-0">Broad coverage spanning management, IT, HR, and administrative services across the region.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <i class="fa-solid fa-shield-check text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Validation Process</h6>
+                                    <p class="text-muted small mb-0">Strict filtering to guarantee true independence and functional comparability of all service providers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loan/Interest Rate Database -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-lg p-5" style="border-radius: 20px; border-top: 5px solid var(--primary-green) !important; background: white; transition: transform 0.3s ease;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="mb-0 text-uppercase" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.6rem; color: var(--primary-green-dark);">Interest Rate Database</h3>
+                        </div>
+                        <p class="text-muted mb-4 pb-2 border-bottom">Our Interest Rate Database delivers precise benchmarking for intercompany loans and financial transactions.</p>
+                        
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-satellite-dish text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Data Sourcing</h6>
+                                    <p class="text-muted small mb-0">Aggregated from central banks, leading financial institutions, and public loan agreements.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-globe text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Coverage</h6>
+                                    <p class="text-muted small mb-0">Broad coverage spanning management, IT, HR, and administrative services across the region.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <i class="fa-solid fa-shield-check text-orange mt-1 me-3" style="color: var(--primary-orange);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Validation Process</h6>
+                                    <p class="text-muted small mb-0">Strict filtering to guarantee true independence and functional comparability of all service providers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Database -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-lg p-5" style="border-radius: 20px; border-top: 5px solid var(--primary-orange) !important; background: white; transition: transform 0.3s ease;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h3 class="mb-0 text-uppercase" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.6rem; color: var(--primary-green-dark);">Services Database</h3>
+                        </div>
+                        <p class="text-muted mb-4 pb-2 border-bottom">The Services Database provides robust comparables for intercompany management and support services.</p>
+                        
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-satellite-dish text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Data Sourcing</h6>
+                                    <p class="text-muted small mb-0">Sourced from independent service providers, public contracts, and regional market surveys.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-globe text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Coverage</h6>
+                                    <p class="text-muted small mb-0">Broad coverage spanning management, IT, HR, and administrative services across the region.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <i class="fa-solid fa-shield-check text-success mt-1 me-3" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Validation Process</h6>
+                                    <p class="text-muted small mb-0">Strict filtering to guarantee true independence and functional comparability of all service providers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="var(--primary-green)"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form class="newsletter-form position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" name="email" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="book-a-demo.html" class="footer-link">Book a Demo</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 ">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:connect@gulftp.com">connect@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var app = angular.module('gulfApp', []);
+        
+        // Controller handling the Mission / Vision tabs
+        app.controller('AboutController', function($scope) {
+            $scope.activeTab = 'mission'; // Default to mission
+        });
+
+        // Animated Counter Function
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger animation when stats section comes into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsSection = document.querySelector('.stats-banner');
+            
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
+
+<!-- Newsletter Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            const originalBtnHTML = submitBtn.innerHTML;
+            
+            // Create or get message container
+            let msgContainer = form.nextElementSibling;
+            if (!msgContainer || !msgContainer.classList.contains('newsletter-msg')) {
+                msgContainer = document.createElement('div');
+                msgContainer.classList.add('newsletter-msg', 'mt-2', 'small');
+                form.parentNode.insertBefore(msgContainer, form.nextSibling);
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            msgContainer.style.display = 'none';
+            
+            const data = {
+                form_type: 'Newsletter',
+                email: emailInput.value
+            };
+            
+            fetch('submit-form-simple.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                
+                msgContainer.style.display = 'block';
+                if (result.success) {
+                    msgContainer.innerHTML = '<span class="text-success"><i class="fa-solid fa-check-circle me-1"></i> Subscribed successfully!</span>';
+                    form.reset();
+                    setTimeout(() => { msgContainer.style.display = 'none'; }, 5000);
+                } else {
+                    msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> ' + (result.error || "Subscription failed.") + '</span>';
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                msgContainer.style.display = 'block';
+                msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> An error occurred.</span>';
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+</script>
+</body>
+
+</html>
