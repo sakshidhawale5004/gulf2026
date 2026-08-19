@@ -2207,12 +2207,20 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 /* Remove stock image backgrounds and use premium un-stock deep teal background */
-.comparables-data-section, .newsletter-section {
-    background-color: var(--deep-teal) !important;
-    background-image: radial-gradient(circle at 80% 20%, rgba(0, 107, 87, 0.4) 0%, transparent 60%) !important;
+
+/* Backgrounds requested by user */
+.comparables-data-section {
+    background: url("bg.jpg") center/cover no-repeat !important;
     position: relative;
     overflow: hidden;
 }
+
+.newsletter-section {
+    background: url("background (2).jpg") center/cover no-repeat fixed !important;
+    position: relative;
+    overflow: hidden;
+}
+
 /* Ensure the inner overlay doesn't darken the deep teal too much */
 .comparables-data-section > .position-absolute, .newsletter-section > .position-absolute {
     background-color: transparent !important;
