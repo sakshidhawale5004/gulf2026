@@ -540,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Newsletter & Testimonial --- */
-.newsletter-section {
+.newsletter-hero {
     padding: 100px 0;
     background: var(--bg-light);
 }
@@ -2215,14 +2215,14 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     overflow: hidden;
 }
 
-.newsletter-section {
+.newsletter-hero {
     background: url("background (2).jpg") center/cover no-repeat fixed !important;
     position: relative;
     overflow: hidden;
 }
 
 /* Ensure the inner overlay doesn't darken the deep teal too much */
-.comparables-data-section > .position-absolute, .newsletter-section > .position-absolute {
+.comparables-data-section > .position-absolute, .newsletter-hero > .position-absolute {
     background-color: transparent !important;
 }
 
@@ -2274,4 +2274,9 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     position: relative;
     z-index: 3;
     font-weight: 600;
+}
+
+/* Make sure the text on the backgrounds is visible */
+.comparables-data-section .text-white, .newsletter-hero .text-white {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
