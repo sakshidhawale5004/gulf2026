@@ -2807,3 +2807,12 @@ img:not(header img):not(nav img):not(footer img):not(.footer img):not([style*="a
     padding-left: 15px;
 }
 
+
+.text-gradient-red-orange {
+    background: linear-gradient(to right, var(--accent-red), var(--primary-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
