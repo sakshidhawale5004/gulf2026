@@ -2816,3 +2816,13 @@ img:not(header img):not(nav img):not(footer img):not(.footer img):not([style*="a
     display: inline-block;
 }
 
+
+.text-gradient-red-orange {
+    background: linear-gradient(to right, var(--accent-red), var(--primary-orange)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+    display: inline-block;
+}
+
