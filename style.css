@@ -2568,7 +2568,7 @@ p {
 /* The inner container gets the background, radius, and shape */
 .page-hero .container, .hero-banner .container, .subscription-hero .container {
     background: linear-gradient(135deg, var(--deep-teal) 50%, var(--primary-orange) 50%) !important;
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     padding: 50px 5% !important; /* Reduced inner height, nice side padding */
     margin: 0 auto !important; /* Center it */
     position: relative;
@@ -2795,7 +2795,7 @@ h1, h2, h3, h4, h5, h6,
    GLOBAL CONTENT IMAGE STYLING (Padding & Radius)
    ========================================================================== */
 img:not(header img):not(nav img):not(footer img):not(.footer img):not([style*="absolute"]):not(.navbar-brand img):not(.hero-section img):not(.hero img):not(.hero-right-img img) {
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     padding: 20px !important;
     background-color: #ffffff !important;
     box-sizing: border-box !important;
