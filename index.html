@@ -122,52 +122,95 @@
         </div>
     </header>
 
-    <!-- Premium International Hero Section -->
-    <section class="hero-section position-relative overflow-hidden">
-        <video src="herosectionvideo.mp4" autoplay loop muted playsinline class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: 0;"></video>
-    <div class="hero-overlay" style="z-index: 1;"></div>
-        <div class="container hero-content position-relative" style="z-index: 2;">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="hero-badge motion-fade-up mb-4 d-inline-flex align-items-center bg-white bg-opacity-10 text-white px-3 py-2 rounded-pill border border-white border-opacity-25" style="backdrop-filter: blur(10px);">
-                        <i class="fa-solid fa-chart-pie me-2 text-warning"></i> <span class="fw-medium text-uppercase" style="font-size: 0.85rem; letter-spacing: 1px;">GCC Regional Data</span>
-                    </div>
-                    <h1 class="hero-title motion-fade-up motion-delay-1 text-white mb-4" style=" font-size: 3.8rem; line-height: 1.15; ">
-                        Unlock Over <span class="highlight">100,000+</span><br>Comparable Companies
-                    </h1>
-                    <p class="hero-subtitle motion-fade-up motion-delay-2 text-white text-opacity-75 mb-5 fs-6" style="max-width: 540px; line-height: 1.7; ">
-                        GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.
-                    </p>
-                    <div class="hero-buttons motion-fade-up motion-delay-3 d-flex flex-wrap gap-3">
-                        <a href="book-search.html" class="btn-orange btn px-4 py-3 shadow-lg btn-shine" style="font-size: 1.1rem;"><i class="fa-solid fa-magnifying-glass me-2"></i> Request Benchmark</a>
+    <!-- Premium International Hero Section (Split Design) -->
+    <section class="hero-section position-relative overflow-hidden bg-white" style="min-height: 90vh;">
+        <div class="container-fluid p-0 h-100">
+            <div class="row g-0 h-100 align-items-stretch">
+                
+                <!-- Left Text Column -->
+                <div class="col-lg-5 col-xl-5 px-4 px-md-5 py-5 d-flex flex-column justify-content-center position-relative" style="z-index: 2;">
+                    <div class="ps-xl-5 mt-4 mt-lg-0">
+                        
+                        <div class="d-inline-flex align-items-center mb-4 px-3 py-2 rounded-pill bg-white shadow-sm" style="border: 1px solid rgba(0,0,0,0.05);">
+                            <span class="d-inline-block rounded-circle me-2" style="width:8px; height:8px; background-color: var(--primary-orange);"></span>
+                            <span class="text-muted" style="font-size: 0.8rem; letter-spacing: 1px; font-weight: 500;">GCC REGIONAL DATA</span>
+                        </div>
+                        
+                        <h1 class="hero-title text-dark mb-4" style="font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: 1.1; letter-spacing: -1px; font-weight: 600 !important;">
+                            Unlock Over <br>
+                            <span style="color: var(--primary-orange);">100,000+</span><br>
+                            Comparable<br>
+                            Companies
+                        </h1>
+                        
+                        <p class="hero-subtitle text-muted mb-5" style="max-width: 480px; font-size: 1.1rem; line-height: 1.7;">
+                            GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.
+                        </p>
+                        
+                        <div class="d-flex flex-wrap gap-3 mb-5">
+                            <a href="buy-subscription.html" class="btn px-4 py-3 rounded-2 shadow-sm d-flex align-items-center gap-2" style="background: var(--primary-orange); color: white; border: none; font-weight: 500;">
+                                <i class="fa-solid fa-magnifying-glass"></i> REQUEST BENCHMARK
+                            </a>
+                            <a href="book-a-demo.html" class="btn px-4 py-3 rounded-2 d-flex align-items-center gap-2" style="background: transparent; border: 2px solid #e2e8f0; color: var(--deep-teal); font-weight: 500;">
+                                BOOK DEMO <i class="fa-regular fa-calendar"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-3 mt-4 scroll-explore" style="opacity: 0.7;">
+                            <span class="text-muted" style="font-size: 0.75rem; letter-spacing: 1px; font-weight: 500;">SCROLL TO EXPLORE</span>
+                            <div class="rounded-circle d-flex align-items-center justify-content-center" style="width:30px; height:30px; border: 1px solid #e2e8f0;">
+                                <i class="fa-solid fa-arrow-down text-muted" style="font-size: 0.75rem;"></i>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
+                
+                <!-- Right Image Column -->
+                <div class="col-lg-7 col-xl-7 position-relative h-100 d-none d-lg-block pb-4">
+                    <!-- The massive border-radius container -->
+                    <div class="w-100 position-relative shadow-lg mt-4 me-4" style="height: calc(100% - 2rem); min-height: 85vh; background: url('herosectionimagefinal.jpg') center/cover no-repeat; border-top-left-radius: 120px; border-bottom-left-radius: 120px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; overflow: hidden;">
+                        
+                        <!-- Overlay for better contrast if image is too bright -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(10,34,28,0.7), rgba(10,34,28,0.2));"></div>
 
-                <div class="col-lg-6 d-none d-lg-block position-relative">
-                    <div class="motion-fade-up motion-delay-2" style="z-index: 2; position: relative;">
-                        <div class="continuous-float">
-                            <div class="position-relative hero-3d-wrapper" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.5">
-                                <img src="gulftp-hero section.jpg" alt="GulfTP Platform" class="img-fluid rounded-4 shadow-lg hero-3d-element" style="border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;">
-
-                                
-                                    <div class="fw-medium" style="color: var(--primary-green); font-size: 1.5rem; font-family: 'GT Walsheim', 'Outfit', sans-serif; line-height: 1;">100%</div>
+                        <!-- Floating Info Bar (Inside Image) -->
+                        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 bg-white rounded-pill shadow-lg d-flex align-items-center justify-content-around py-3 px-4" style="width: 85%; max-width: 800px; z-index: 10;">
+                            
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-3" style="color: var(--primary-green);"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div>
+                                    <div class="text-dark fs-5" style="line-height: 1; font-weight: 600;">100K+</div>
+                                    <div class="text-muted" style="font-size: 0.8rem; line-height: 1.2;">Comparable<br>Companies</div>
                                 </div>
+                            </div>
+                            
+                            <div style="width:1px; height:40px; background:#e2e8f0;"></div>
+                            
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-3" style="color: var(--primary-green);"><i class="fa-solid fa-earth-americas"></i></div>
+                                <div>
+                                    <div class="text-dark fs-5" style="line-height: 1; font-weight: 600;">GCC</div>
+                                    <div class="text-muted" style="font-size: 0.8rem; line-height: 1.2;">Regional<br>Coverage</div>
+                                </div>
+                            </div>
+                            
+                            <div style="width:1px; height:40px; background:#e2e8f0;"></div>
+                            
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-3" style="color: var(--primary-green);"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                <div>
+                                    <div class="text-dark fs-5" style="line-height: 1; font-weight: 600;">24/7</div>
+                                    <div class="text-muted" style="font-size: 0.8rem; line-height: 1.2;">Data<br>Access</div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
                 
-                </div>
             </div>
         </div>
-        
-        <!-- Bottom Curve/Wave -->
-        <div class="position-absolute bottom-0 w-100" style="z-index: 10;">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: auto;" preserveAspectRatio="none">
-                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#f8fafc"></path>
-            </svg>
-        </div>
-        <div class="scroll-indicator">SCROLL TO EXPLORE<div class="scroll-line"></div></div>
     </section>
 
     <!-- Stat Bar beneath fold -->
