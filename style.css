@@ -2790,3 +2790,15 @@ h1, h2, h3, h4, h5, h6,
     background: white !important;
     color: var(--primary-orange) !important;
 }
+
+/* ==========================================================================
+   GLOBAL CONTENT IMAGE STYLING (Padding & Radius)
+   ========================================================================== */
+img:not(header img):not(nav img):not(footer img):not(.footer img):not([style*="absolute"]):not(.navbar-brand img):not(.hero-section img):not(.hero img):not(.hero-right-img img) {
+    border-radius: 20px !important;
+    padding: 20px !important;
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+    /* Adding a subtle border so the padding frame is visible on white backgrounds */
+    border: 1px solid rgba(8, 102, 75, 0.08) !important;
+}
