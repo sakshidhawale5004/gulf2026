@@ -31,7 +31,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
     font-weight: 500;
     color: var(--primary-green);
     letter-spacing: -0.02em;
@@ -515,7 +514,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .stat-number {
     font-size: 3.5rem;
-    font-weight: 700;
     font-weight: 500;
     color: var(--primary-orange);
     margin-bottom: 10px;
@@ -640,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .glass-card-title {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text-dark); /* text-dark */
     margin-bottom: 15px;
     transform: translateZ(20px);
@@ -720,7 +718,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-hero h1, .hero-banner .hero-title, .contact-hero .contact-title {
-    font-weight: 700;
     font-weight: 500;
     font-size: 3rem;
     margin-bottom: 15px;
@@ -746,7 +743,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Common Section Styles */
 .section-padding { padding: 80px 0; }
-.section-title { font-weight: 700; font-weight: 500; font-size: 2.0rem; margin-top: 30px; margin-bottom: 20px; color: var(--primary-green); }
+.section-title { font-weight: 500; font-size: 2.0rem; margin-top: 30px; margin-bottom: 20px; color: var(--primary-green); }
 .sub-heading { color: var(--primary-green); font-weight: 700; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; }
 .content-body p { font-size: 1rem; color: var(--text-muted); /* text-muted */ line-height: 1.8; margin-bottom: 15px; }
 .content-body ul.bullet-list { list-style-type: none; padding-left: 0; margin-bottom: 20px; }
@@ -906,7 +903,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .section-padding { padding: 100px 0; }
 .section-heading { margin-bottom: 30px; }
 .sub-title { color: var(--primary-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; display: block; margin-bottom: 10px; }
-.section-heading .title { font-weight: 700; font-weight: 500; font-size: 2.0rem; line-height: 1.2; color: var(--primary-green); }
+.section-heading .title { font-weight: 500; font-size: 2.0rem; line-height: 1.2; color: var(--primary-green); }
 .about-image-wrapper { position: relative; padding-right: 30px; padding-bottom: 30px; }
 .experience-badge { position: absolute; bottom: 0; right: 0; background: var(--primary-green); color: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 20px 40px rgba(8, 102, 75, 0.3); }
 .experience-badge h2 { font-size: 3.5rem; font-weight: 500; margin: 0; line-height: 1; }
@@ -1670,10 +1667,7 @@ section img,
 
 
 /* Ensure sub-headings don't get too overwhelmingly large */
-h3, .h3 {
-    letter-spacing: 0.06em !important;
-    font-weight: 700 !important;
-}
+
 
 .btn-outline-custom-green {
     border: 2px solid var(--primary-green) !important;
@@ -2472,7 +2466,7 @@ p {
     color: var(--deep-teal) !important;
     font-size: 1.25rem;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -2613,7 +2607,7 @@ h1, h2, h3, h4, h5, h6,
 .title, .section-heading .title, .hero-title,
 .hero-title span.highlight,
 .navbar-brand, .value-card h4, .benefit-card h5 {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 
 /* ==========================================================================
@@ -2682,7 +2676,7 @@ h1, h2, h3, h4, h5, h6,
 .footer-heading {
     color: var(--primary-orange) !important; /* Orange combination as requested */
     margin-bottom: 25px;
-    font-weight: 600 !important; /* Synchronized font weight */
+    font-weight: 500 !important; /* Synchronized font weight */
     font-size: 1.15rem;
     letter-spacing: 0.5px;
     position: relative;
