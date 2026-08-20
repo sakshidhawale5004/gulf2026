@@ -2669,3 +2669,14 @@ p {
     margin-bottom: 0.5rem !important;
     font-size: clamp(2rem, 4vw, 3rem) !important;
 }
+
+
+/* ==========================================================================
+   SYNCHRONIZED FONT WEIGHTS FOR ALL PAGES
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, 
+.title, .section-heading .title, .hero-title,
+.hero-title span.highlight,
+.navbar-brand, .value-card h4, .benefit-card h5 {
+    font-weight: 500 !important;
+}
