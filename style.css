@@ -2796,3 +2796,14 @@ img:not(header img):not(nav img):not(footer img):not(.footer img):not([style*="a
     /* Adding a subtle border so the padding frame is visible on white backgrounds */
     border: 1px solid rgba(8, 102, 75, 0.08) !important;
 }
+
+.text-accent-red { color: var(--accent-red) !important; }
+.bg-accent-red { background-color: var(--accent-red) !important; }
+.border-accent-red { border-color: var(--accent-red) !important; }
+
+
+.section-title, .section-heading .title {
+    border-left: 4px solid var(--accent-red);
+    padding-left: 15px;
+}
+
