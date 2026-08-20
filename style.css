@@ -2469,7 +2469,7 @@ p {
 
 
 .value-card h4 {
-    color: #ffffff !important;
+    color: var(--deep-teal) !important;
     font-size: 1.25rem;
     margin-bottom: 15px;
     font-weight: 600;
@@ -2613,7 +2613,7 @@ h1, h2, h3, h4, h5, h6,
 .title, .section-heading .title, .hero-title,
 .hero-title span.highlight,
 .navbar-brand, .value-card h4, .benefit-card h5 {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
 /* ==========================================================================
@@ -2682,7 +2682,7 @@ h1, h2, h3, h4, h5, h6,
 .footer-heading {
     color: var(--primary-orange) !important; /* Orange combination as requested */
     margin-bottom: 25px;
-    font-weight: 500 !important; /* Synchronized font weight */
+    font-weight: 600 !important; /* Synchronized font weight */
     font-size: 1.15rem;
     letter-spacing: 0.5px;
     position: relative;
