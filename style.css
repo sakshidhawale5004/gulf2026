@@ -652,49 +652,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Sleek Unique Footer --- */
-.footer {
-    background-color: var(--primary-green);
-    color: #94a3b8;
-    padding: 0 0 30px;
-    font-size: 0.95rem;
-    margin-top: 60px;
-    border-top: none;
-}
-.footer-wave {
-    position: absolute;
-    top: -59px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-.footer-wave svg {
-    display: block;
-    width: calc(100% + 4px);
-    height: 60px;
-    margin-left: -2px;
-}
-.footer-heading {
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-.footer-link {
-    color: #94a3b8;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: block;
-    margin-bottom: 12px;
-}
-.footer-link:hover {
-    color: var(--primary-orange);
-    transform: translateX(8px);
-}
-.footer-contact {
-    color: #cbd5e1;
-}
+
+
+
+
+
+
+
 .footer-contact a {
     color: #cbd5e1;
     text-decoration: none;
@@ -703,89 +667,25 @@ h1, h2, h3, h4, h5, h6 {
 .footer-contact a:hover {
     color: var(--primary-green);
 }
-.footer-newsletter {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-}
+
 .footer-newsletter h6 {
     font-weight: 300 !important;
 }
-.footer-input {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 30px;
-    padding: 12px 20px;
-    padding-right: 55px;
-}
+
 .footer-input:focus {
     background: rgba(0, 0, 0, 0.3);
     border-color: var(--primary-green);
     color: white;
     box-shadow: 0 0 0 0.25rem rgba(8, 102, 75, 0.25);
 }
-.footer-submit-btn {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.footer-submit-btn:hover {
-    transform: scale(1.1);
-    color: white;
-    box-shadow: var(--shadow-glow-green);
-}
-.social-icons-modern {
-    display: flex;
-    gap: 15px;
-}
-.social-icons-modern a {
-    width: 45px; height: 45px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    border: 1px solid rgba(255,255,255,0.05);
-    text-decoration: none;
-}
-.social-icons-modern a:hover {
-    background: var(--primary-orange);
-    color: white;
-    transform: translateY(-5px) rotate(8deg);
-    box-shadow: var(--shadow-glow-orange);
-    border-color: transparent;
-}
-.footer-bottom-bar {
-    margin-top: 40px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.85rem;
-    color: #64748b;
-}
-.footer-legal-links a {
-    color: #64748b;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-.footer-legal-links a:hover {
-    color: white;
-}
+
+
+
+
+
+
+
+
 
 @media (max-width: 991px) {
     .hero-title { font-size: 3rem; }
@@ -868,9 +768,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .btn-submit { background-color: var(--primary-green); color: #ffffff; font-weight: 600; border: none; padding: 12px; width: 100%; border-radius: 0; text-transform: uppercase; font-size: 0.9rem; }
 .btn-submit:hover { background-color: var(--primary-green-dark); color: #ffffff; }
 /* Overrides for Home Banner and Footer */
-.footer {
-    background-color: var(--primary-green) !important;
-}
+
 .footer-wave path {
     fill: var(--primary-green) !important;
 }
@@ -2679,4 +2577,179 @@ h1, h2, h3, h4, h5, h6,
 .hero-title span.highlight,
 .navbar-brand, .value-card h4, .benefit-card h5 {
     font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   NEW REDESIGNED FOOTER (Dark Teal & Orange Reference Design)
+   ========================================================================== */
+.footer {
+    background-color: var(--deep-teal); /* Dark green/teal base */
+    color: #e2e8f0;
+    padding: 0 0 30px;
+    font-size: 0.95rem;
+    margin-top: 60px;
+    border-top: none;
+    position: relative;
+    overflow: hidden; /* For the giant watermark */
+}
+
+/* Giant background watermark imitating the reference "A" */
+.footer::before {
+    content: '*';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%) rotate(15deg);
+    font-size: 800px;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
+    color: var(--primary-green); /* A lighter green overlay on the dark teal */
+    opacity: 0.05;
+    z-index: 0;
+    line-height: 0;
+    pointer-events: none;
+}
+.footer::after {
+    content: '*';
+    position: absolute;
+    bottom: -20%;
+    right: 5%;
+    transform: rotate(-15deg);
+    font-size: 500px;
+    font-family: 'GT Walsheim', 'Outfit', sans-serif;
+    color: var(--primary-orange);
+    opacity: 0.03;
+    z-index: 0;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.footer-wave {
+    position: absolute;
+    top: -59px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+}
+.footer-wave svg {
+    display: block;
+    width: calc(100% + 4px);
+    height: 60px;
+    margin-left: -2px;
+}
+.footer-wave path {
+    fill: var(--deep-teal) !important;
+}
+
+.footer-heading {
+    color: var(--primary-orange) !important; /* Orange combination as requested */
+    margin-bottom: 25px;
+    font-weight: 500 !important; /* Synchronized font weight */
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-link {
+    color: #f8fafc !important; /* Bright white text like the reference */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+.footer-link:hover {
+    color: var(--primary-orange) !important;
+    transform: translateX(6px);
+}
+
+.footer-contact {
+    color: #f8fafc;
+    position: relative;
+    z-index: 2;
+}
+.footer-contact a {
+    color: #f8fafc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-contact a:hover {
+    color: var(--primary-orange);
+}
+
+.footer-bottom-bar {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    position: relative;
+    z-index: 2;
+}
+.footer-legal-links a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.footer-legal-links a:hover {
+    color: white;
+}
+
+.social-icons-modern {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+.social-icons-modern a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.social-icons-modern a:hover {
+    background: var(--primary-orange);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Redesign the newsletter input */
+.footer-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: white !important;
+    border-radius: 8px;
+    padding: 12px 45px 12px 15px;
+}
+.footer-input::placeholder {
+    color: rgba(255,255,255,0.4) !important;
+}
+.footer-submit-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-orange) !important;
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-submit-btn:hover {
+    background: white !important;
+    color: var(--primary-orange) !important;
 }
