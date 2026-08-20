@@ -201,10 +201,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
     line-height: 1.1;
-    color: white;
+    color: #ffffff;
     margin-bottom: 1.5rem;
+    letter-spacing: -1px;
 }
 .hero-title span {
     display: inline-block;
@@ -218,10 +219,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.7;
     margin-bottom: 2.5rem;
-    max-width: 600px;
 }
 
 /* --- Floating Action Cards --- */
@@ -688,7 +689,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media (max-width: 991px) {
-    .hero-title { font-size: 3rem; }
+    .hero-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
     .action-section { background-color: var(--bg-light);  margin-top: 40px; padding-bottom: 40px; }
     .navbar-custom { background: var(--bg-white); }
 }
@@ -719,7 +726,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
     position: relative;
     z-index: 2;
-    color: white !important;
+    color: #ffffff !important;
 }
 
 .hero-breadcrumb, .breadcrumb-text {
@@ -774,8 +781,19 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 
 
-.hero-title { color: #ffffff !important; }
-.hero-subtitle { color: rgba(255, 255, 255, 0.85) !important; }
+.hero-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
 .hero-badge {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #ffffff !important;
@@ -829,8 +847,19 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
     padding: 150px 0 250px 0;
     
 }
-.hero-title { font-size: 4.5rem; font-weight: 500; line-height: 1.1; margin-bottom: 20px; }
-.hero-subtitle { font-size: 1.1rem; max-width: 600px; line-height: 1.8; margin-bottom: 40px; }
+.hero-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
 .text-orange { color: var(--primary-orange) !important; -webkit-text-fill-color: var(--primary-orange) !important; background: none !important; -webkit-background-clip: unset !important; background-clip: unset !important; display: inline-block; overflow: visible; }
 
 /* Animations */
@@ -1662,7 +1691,11 @@ h1:not(.hero-title), h2, h3, h4, h5, h6, .title, .section-heading .title {
     color: var(--primary-green);
 }
 .hero-title {
-    color: #ffffff !important;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
 }
 
 /* 3D Button Effects */
@@ -1751,16 +1784,20 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 
 /* Hero Content */
 .hero-title {
-    font-family: 'GT Walsheim', 'Outfit', sans-serif;
-    font-weight: 700 !important;
-    font-size: 60px !important;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
     line-height: 1.1;
-    max-width: 650px;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
 }
 @media (max-width: 767px) {
     .hero-title {
-        font-size: 40px !important;
-    }
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
 }
 .hero-title span.highlight {
     color: var(--primary-orange);
@@ -1780,10 +1817,10 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 .hero-subtitle {
-    font-size: 18px !important;
-    line-height: 1.6;
-    max-width: 580px !important;
-    opacity: 0.85;
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
 }
 
 /* Primary CTA */
@@ -1924,7 +1961,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     background-color: var(--bg-light) !important;
 }
 .bg-green-dark {
-    background-color: var(--deep-teal) !important;
+    background-color: #ffffff !important;
     color: #fff;
 }
 
@@ -2182,7 +2219,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 .page-hero .container p, .hero-banner .container p, .subscription-hero .container p,
 .page-hero .container a, .hero-banner .container a, .subscription-hero .container a {
     color: #ffffff !important;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+    text-shadow: none !important;
 }
 
 /* ==========================================================================
@@ -2432,7 +2469,7 @@ p {
 
 
 .value-card h4 {
-    color: var(--deep-teal) !important;
+    color: #ffffff !important;
     font-size: 1.25rem;
     margin-bottom: 15px;
     font-weight: 600;
