@@ -5,7 +5,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
 # Replace the image
-html = html.replace('src="Expert Support for Your Transfer Pricing Needs.jpg"', 'src="aboutpageimage.jpg"')
+html = html.replace('src="Expert Support for Your Transfer Pricing Needs-FINAL1.jpg"', 'src="aboutpageimage.jpg"')
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)

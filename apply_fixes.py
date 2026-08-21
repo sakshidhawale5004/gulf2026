@@ -13,8 +13,8 @@ html = re.sub(r'<img\s+src="[^"]*"\s+alt="Interest Rates"[^>]*>', '<img src="Int
 html = re.sub(r'<img\s+src="[^"]*"\s+alt="IP Licensing"[^>]*>', '<img src="IP Licensing.jpg" alt="IP Licensing" class="card-img-top">', html)
 
 # Expert Support for Your Transfer Pricing Needs
-html = re.sub(r'<img\s+src="[^"]*"\s+alt="Transfer Pricing Experts"[^>]*>', '<img src="Expert Support for Your Transfer Pricing Needs.jpg" alt="Transfer Pricing Experts" class="img-fluid rounded shadow-lg">', html)
-html = re.sub(r'<img\s+src="[^"]*"\s+alt="Transfer Pricing Data Dashboard"[^>]*>', '<img src="Expert Support for Your Transfer Pricing Needs.jpg" alt="Transfer Pricing Data Dashboard" class="img-fluid rounded shadow-lg">', html)
+html = re.sub(r'<img\s+src="[^"]*"\s+alt="Transfer Pricing Experts"[^>]*>', '<img src="Expert Support for Your Transfer Pricing Needs-FINAL1.jpg" alt="Transfer Pricing Experts" class="img-fluid rounded shadow-lg">', html)
+html = re.sub(r'<img\s+src="[^"]*"\s+alt="Transfer Pricing Data Dashboard"[^>]*>', '<img src="Expert Support for Your Transfer Pricing Needs-FINAL1.jpg" alt="Transfer Pricing Data Dashboard" class="img-fluid rounded shadow-lg">', html)
 # Let's just blindly replace the image source near "Expert Support for Your Transfer Pricing Needs" if we don't know the alt tag.
 # We will use regex to find the section and replace the img tag.
 

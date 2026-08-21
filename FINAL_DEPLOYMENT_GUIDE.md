@@ -125,7 +125,7 @@ Support Phone: +971 581711600
 ## 💳 Payment Integration
 
 - **Payment Gateway:** Stripe
-- **Payment Amount:** 750 AED
+- **Payment Amount:** 650 AED
 - **Currency:** AED
 - **Stripe Keys:** Stored in `.env` file
 
@@ -330,7 +330,7 @@ public_html/gulftp/
 | **Admin Dashboard** | ✅ | View submissions, filter, analytics |
 | **Database** | ✅ | gulftpforms with form_responses table |
 | **Email Notifications** | ✅ | Admin + user confirmation emails |
-| **Payment Integration** | ✅ | Stripe configured, 750 AED |
+| **Payment Integration** | ✅ | Stripe configured, 650 AED |
 | **Statistics** | ✅ | Dashboard shows total submissions |
 | **Admin Reports** | ✅ | Analytics page with charts |
 

@@ -369,7 +369,7 @@ if ($conn) {
                                 <strong>Noreply Email:</strong> noreply@gulftp.com
                             </div>
                             <div class="info-box highlight">
-                                <strong>Support Phone:</strong> +971 581711600
+                                <strong>Support Phone:</strong> 
                             </div>
                         </div>
 
@@ -529,7 +529,7 @@ if ($conn) {
                                 <strong>Email:</strong> <?php echo defined('ADMIN_EMAIL') ? ADMIN_EMAIL : 'connect@gulftp.com'; ?>
                             </div>
                             <div class="info-box">
-                                <strong>Phone:</strong> +971 581711600
+                                <strong>Phone:</strong> 
                             </div>
                             <div class="info-box">
                                 <strong>Website:</strong> https://gulftp.com

@@ -63,7 +63,7 @@ All automatically detect type and store data:
 
 ### ✅ Payment Integration
 - Stripe configured
-- Amount: 750 AED
+- Amount: 650 AED
 - Secure processing
 
 ---

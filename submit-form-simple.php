@@ -256,7 +256,7 @@ if ($conn->query($sql) === TRUE) {
                     <li>We will contact you at <strong>$email</strong></li>
                     <li>We'll discuss your requirements and provide a tailored solution</li>
                 </ul>
-                <p>If you have any urgent questions, please reach out to us at <strong>connect@gulftp.com</strong> or call <strong>+971 581711600</strong>.</p>
+                <p>If you have any urgent questions, please reach out to us at <strong>connect@gulftp.com</strong> or call <strong></strong>.</p>
                 <p>Best regards,<br><strong>GulfTP Team</strong></p>
             </div>
             <div class='footer'>

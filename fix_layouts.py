@@ -14,7 +14,7 @@ if story_sec_2_idx != -1:
         end_quote = html.find('"', img_idx + 10)
         end_quote = html.find('"', end_quote + 1)
         old_img = html[img_idx:end_quote+1]
-        html = html[:img_idx] + '<img src="Expert Support for Your Transfer Pricing Needs.jpg"' + html[end_quote+1:]
+        html = html[:img_idx] + '<img src="Expert Support for Your Transfer Pricing Needs-FINAL1.jpg"' + html[end_quote+1:]
         
 with open('about.html', 'w', encoding='utf-8') as f:
     f.write(html)

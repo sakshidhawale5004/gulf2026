@@ -65,7 +65,7 @@ $stripe_data = [
                 'product_data' => [
                     'name' => 'GCC Benchmark Search',
                 ],
-                'unit_amount' => 75000, // $750.00
+                'unit_amount' => 65000, // $650.00
             ],
             'quantity' => 1,
         ],

@@ -20,7 +20,7 @@
                 <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> connect@gulftp.com</li>
-                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                        
                     </ul>
                 </div>
                 <div data-aos="fade-up" class="col-md-6 text-end">
@@ -195,7 +195,7 @@
                             </div>
                             <div class="ms-3">
                                 <h6 class="text-white mb-1" style="font-family: 'GT Walsheim', 'Outfit', sans-serif; font-size: 1.15rem;">Secure Your Report</h6>
-                                <p class="text-white-50 small mb-0" style="font-family: 'GT Walsheim', 'Outfit', sans-serif;">Complete payment of $750 for your GCC benchmark search (includes verified comparable data and expert analysis).</p>
+                                <p class="text-white-50 small mb-0" style="font-family: 'GT Walsheim', 'Outfit', sans-serif;">Complete payment of $650 for your GCC benchmark search (includes verified comparable data and expert analysis).</p>
                             </div>
                         </div>
                         
@@ -230,10 +230,7 @@
                             <label class="form-label fw-medium" style="color: var(--primary-green) !important;">Email Address <span class="text-danger">*</span></label>
                             <input type="email" name="email" class="form-control form-control-lg premium-input" required>
                         </div>
-                        <div data-aos="fade-up" class="col-md-6">
-                            <label class="form-label fw-medium" style="color: var(--primary-green) !important;">Phone Number <span class="text-danger">*</span></label>
-                            <input type="tel" name="phone" class="form-control form-control-lg premium-input" required>
-                        </div>
+
                         <div data-aos="fade-up" class="col-md-6">
                             <label class="form-label fw-medium" style="color: var(--primary-green) !important;">Company Name <span class="text-danger">*</span></label>
                             <input type="text" name="company" class="form-control form-control-lg premium-input" required>
@@ -280,7 +277,7 @@
                     </div>
 
                     <div class="alert alert-info mb-4">
-                        <i class="fa-solid fa-info-circle me-2"></i> <strong>Price: $750</strong> - Includes verified comparable company data and expert analysis
+                        <i class="fa-solid fa-info-circle me-2"></i> <strong>Price: $650</strong> - Includes verified comparable company data and expert analysis
                     </div>
                     
                     <!-- Payment Status Messages -->
@@ -292,7 +289,7 @@
                     </div>
 
                     <button type="button" class="btn btn-lg w-100 fw-medium text-white shadow-sm premium-submit-btn" id="paymentBtn" style="background: linear-gradient(135deg, var(--primary-orange), #e8612c); border: none; padding: 15px 0;">
-                        Proceed to Payment - $750 <i class="fa-solid fa-credit-card ms-2"></i>
+                        Proceed to Payment - $650 <i class="fa-solid fa-credit-card ms-2"></i>
                     </button>
                 </form>
             </div>
@@ -353,7 +350,7 @@
                 <div data-aos="fade-up" class="col-lg-3 col-md-4 ">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:connect@gulftp.com">connect@gulftp.com</a></p>
-                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
                     
                     <div class="social-icons-modern">
                         <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -399,7 +396,7 @@
                 body: JSON.stringify({
                     firstName: 'init',
                     email: 'init@test.com',
-                    amount: 750
+                    amount: 650
                 })
             });
 
@@ -430,7 +427,7 @@
         // Get form data
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        data.amount = 750; // $750
+        data.amount = 650; // $650
 
         try {
             // Save to database
@@ -464,7 +461,7 @@
             errorText.textContent = error.message || 'An error occurred. Please try again.';
             errorMessage.style.display = 'block';
             paymentBtn.disabled = false;
-            paymentBtn.innerHTML = 'Proceed to Payment - $750 <i class="fa-solid fa-credit-card ms-2"></i>';
+            paymentBtn.innerHTML = 'Proceed to Payment - $650 <i class="fa-solid fa-credit-card ms-2"></i>';
         }
     });
 </script>

@@ -39,7 +39,7 @@ def apply_aos_manual(filepath):
 
         # 2. Expert Support for Your Transfer Pricing Needs (Image is on the LEFT -> fade-right)
         # Search for: <div class="col-lg-6 mb-4 mb-lg-0">
-        html = re.sub(r'(<div class="col-lg-6 mb-4 mb-lg-0"[^>]*>)(\s*<img src="Expert Support for Your Transfer Pricing Needs.jpg")', r'<div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">\2', html)
+        html = re.sub(r'(<div class="col-lg-6 mb-4 mb-lg-0"[^>]*>)(\s*<img src="Expert Support for Your Transfer Pricing Needs-FINAL1.jpg")', r'<div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">\2', html)
 
         # 3. Comprehensive Transfer Pricing Solutions (Image is on the LEFT -> fade-right)
         # Search for: <div class="col-lg-5"> inside Our Services Section

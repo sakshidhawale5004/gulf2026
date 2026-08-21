@@ -53,7 +53,7 @@ define('STRIPE_PUBLISHABLE_KEY', $_ENV['STRIPE_PUBLISHABLE_KEY'] ?? '');
 define('ADMIN_EMAIL', $_ENV['ADMIN_EMAIL'] ?? 'connect@gulftp.com');
 define('PARENT_EMAIL', $_ENV['PARENT_EMAIL'] ?? 'admin@gulftp.com');
 define('NOREPLY_EMAIL', $_ENV['NOREPLY_EMAIL'] ?? 'noreply@gulftp.com');
-define('PHONE', $_ENV['PHONE'] ?? '+971 581711600');
+define('PHONE', $_ENV['PHONE'] ?? '');
 
 // Application Configuration
 define('APP_NAME', $_ENV['APP_NAME'] ?? 'GulfTP');
@@ -62,7 +62,7 @@ define('APP_ENV', $_ENV['APP_ENV'] ?? 'production');
 define('DEBUG', $_ENV['DEBUG'] === 'true');
 
 // Payment Configuration
-define('PAYMENT_AMOUNT', (int)($_ENV['PAYMENT_AMOUNT'] ?? 750));
+define('PAYMENT_AMOUNT', (int)($_ENV['PAYMENT_AMOUNT'] ?? 650));
 define('PAYMENT_CURRENCY', $_ENV['PAYMENT_CURRENCY'] ?? 'AED');
 
 // Create database connection
