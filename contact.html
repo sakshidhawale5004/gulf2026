@@ -196,30 +196,31 @@
                     <form class="contact-form-glass">
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <input type="text" class="form-control glass-input py-3" placeholder="First name *" required style="border-radius: 8px; background: white;">
+                                <input type="text" name="firstName" class="form-control glass-input py-3" placeholder="First name *" required style="border-radius: 8px; background: white;">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control glass-input py-3" placeholder="Last name *" required style="border-radius: 8px; background: white;">
+                                <input type="text" name="lastName" class="form-control glass-input py-3" placeholder="Last name *" required style="border-radius: 8px; background: white;">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control glass-input py-3" placeholder="Email address *" required style="border-radius: 8px; background: white;">
+                                <input type="email" name="email" class="form-control glass-input py-3" placeholder="Email address *" required style="border-radius: 8px; background: white;">
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control glass-input py-3" placeholder="Company name *" required style="border-radius: 8px; background: white;">
+                                <input type="text" name="company" class="form-control glass-input py-3" placeholder="Company name *" required style="border-radius: 8px; background: white;">
                             </div>
                             
                             <div class="col-md-6">
-                                <select class="form-select glass-select py-3" required style="border-radius: 8px; background: white;">
+                                <select class="form-select glass-select py-3" name="service" required style="border-radius: 8px; background: white;">
                                     <option value="" disabled selected>Service needed *</option>
-                                    <option value="benchmarking">Benchmarking Study</option>
-                                    <option value="policy">Transfer Pricing Policy</option>
-                                    <option value="compliance">Compliance & Documentation</option>
-                                    <option value="other">Other</option>
+                                    <option value="Database Subscription">Database Subscription</option>
+                                    <option value="Comparable Companies Benchmarking">Comparable Companies Benchmarking</option>
+                                    <option value="Interest Rate/Loan Benchmarking">Interest Rate/Loan Benchmarking</option>
+                                    <option value="IP Licensing/ Royalty Benchmarking">IP Licensing/ Royalty Benchmarking</option>
+                                    <option value="Managerial Remuneration/ Connected Persons Benchmarking">Managerial Remuneration/ Connected Persons Benchmarking</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <select class="form-select glass-select py-3" required style="border-radius: 8px; background: white;">
+                                <select class="form-select glass-select py-3" name="country" required style="border-radius: 8px; background: white;">
                                     <option value="" disabled selected>GCC Country *</option>
                                     <option value="uae">UAE</option>
                                     <option value="ksa">KSA</option>
@@ -232,7 +233,7 @@
                             </div>
                             
                             <div class="col-12">
-                                <textarea class="form-control glass-input py-3" rows="4" placeholder="Describe your transfer pricing needs *" required style="border-radius: 8px; background: white;"></textarea>
+                                <textarea class="form-control glass-input py-3" name="message" rows="4" placeholder="Describe your transfer pricing needs *" required style="border-radius: 8px; background: white;"></textarea>
                             </div>
                             
                             <div class="col-12 mt-4">
