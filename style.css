@@ -6,8 +6,8 @@
     --primary-orange-light: #F7A950;
     --accent-red: #ED1B2F;
     
-    --text-dark: #12312D;
-    --text-muted: #64736F;
+    --text-dark: #ffffff;
+    --text-muted: #e0e0e0;
     --bg-light: #F7F9F8;
     --bg-white: #FFFFFF;
     
@@ -24,24 +24,24 @@
 
 body {
     font-family: 'GT Walsheim', 'Outfit', sans-serif;
-    color: var(--text-dark); /* text-dark */
-    background-color: var(--bg-light);
+    color: #ffffff; /* white text */
+    background-color: #004d40; /* dark green background */
     overflow-x: hidden;
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
-    color: var(--primary-green);
+    color: #ffffff; /* white headings */
     letter-spacing: -0.02em;
 }
 
 /* --- Glassmorphism Navbar --- */
 .navbar-custom {
-    background: var(--glass-bg);
+    background: #004d40; /* dark green navbar */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     box-shadow: var(--shadow-sm);
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--primary-green) !important;
+    color: #ffffff !important; /* white nav links */
     margin: 0 12px;
     position: relative;
     transition: color 0.3s ease;
@@ -83,9 +83,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modern Dropdown */
 .dropdown-menu {
-    background: var(--glass-bg);
+    background: #003d33; /* dark green dropdown */
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     padding: 10px;
@@ -97,13 +97,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 16px;
     font-weight: 500;
     font-size: 0.9rem;
-    color: var(--text-dark); /* text-dark */
+    color: #ffffff; /* white dropdown items */
     transition: all 0.2s;
 }
 
 .dropdown-item:hover {
-    background-color: rgba(8, 102, 75, 0.05);
-    color: var(--primary-green);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     transform: translateX(5px);
 }
 
@@ -219,13 +219,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
     font-size: 1.15rem;
-    color: #475569;
+    color: #ffffff; /* white subtitle */
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
 
 /* --- Floating Action Cards --- */
-.action-section { background-color: var(--bg-light); 
+.action-section { background-color: #003d33; /* darker green for sections */
     margin-top:  0px ;
     position: relative;
     z-index: 20;
@@ -787,7 +787,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 .hero-subtitle {
     font-size: 1.15rem;
-    color: #475569;
+    color: #ffffff; /* white subtitle */
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
@@ -853,7 +853,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 .hero-subtitle {
     font-size: 1.15rem;
-    color: #475569;
+    color: #ffffff; /* white subtitle */
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
@@ -1812,7 +1812,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 
 .hero-subtitle {
     font-size: 1.15rem;
-    color: #475569;
+    color: #ffffff; /* white subtitle */
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
