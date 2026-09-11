@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gulfApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GulfTP - Frequently Asked Questions</title>
+    <meta name="description" content="Frequently asked questions about GulfTP - the premier GCC transfer pricing benchmarking database.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="favicon-final.jpeg">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #0d5c3a 60%, #0b4a2f 100%);
+            padding: 90px 0 70px; text-align: center; color: white; position: relative; overflow: hidden;
+        }
+        .faq-section { padding: 80px 0 100px; background: #f8fafb; }
+        .faq-accordion .accordion-item {
+            border: none; border-radius: 14px !important; margin-bottom: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; transition: box-shadow 0.25s ease;
+        }
+        .faq-accordion .accordion-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.10); }
+        .faq-accordion .accordion-button {
+            font-size: 1.05rem; font-weight: 600; color: #1a2b22; background: #ffffff;
+            padding: 22px 26px; border-radius: 14px !important; box-shadow: none !important;
+            display: flex; align-items: flex-start; gap: 14px; line-height: 1.45;
+        }
+        .faq-accordion .accordion-button::before { display: none; }
+        .faq-accordion .accordion-button:not(.collapsed) { color: var(--primary-green); background: #ffffff; border-bottom: 1px solid #f0f4f2; }
+        .faq-accordion .accordion-body { background: #ffffff; color: #4b5563; font-size: 1rem; line-height: 1.75; padding: 20px 26px 26px 68px; }
+        .faq-q-num {
+            flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, #0d7a50 100%);
+            color: #fff; font-size: 0.75rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center; margin-top: 1px;
+        }
+        .faq-q-num-orange { background: linear-gradient(135deg, var(--primary-orange), #e07b0a) !important; }
+        .faq-cta {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #0d5c3a 100%);
+            border-radius: 20px; padding: 56px 40px; color: white; text-align: center;
+            margin-top: 60px; position: relative; overflow: hidden;
+        }
+        .faq-categories .cat-pill {
+            display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 10px;
+            background: #fff; border: 1px solid #e5e7eb; color: #374151;
+            font-size: 0.9rem; font-weight: 500; transition: all 0.2s ease; text-decoration: none;
+        }
+        .faq-categories .cat-pill:hover, .faq-categories .cat-pill.active {
+            background: var(--primary-green); border-color: var(--primary-green); color: #fff;
+        }
+        .cat-icon-green { color: var(--primary-green); }
+        .cat-icon-orange { color: var(--primary-orange); }
+        .faq-categories .cat-pill:hover .cat-icon-green,
+        .faq-categories .cat-pill.active .cat-icon-green,
+        .faq-categories .cat-pill:hover .cat-icon-orange,
+        .faq-categories .cat-pill.active .cat-icon-orange { color: #fff; }
+    </style>
+</head>
+<body ng-controller="MainController">
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div data-aos="fade-up" class="col-md-6">
+                    <ul class="top-info"><li><i class="fa-solid fa-envelope"></i> connect@gulftp.com</li></ul>
+                </div>
+                <div data-aos="fade-up" class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="navbar-custom sticky-top">
+        <div class="container-fluid px-xl-5">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html"><img src="logo.png" alt="GulfTP" style="height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 10px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">Regulation <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 10px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="kuwait-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Kuwait</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Bahrain</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Oman</a></li>
+                                <li><hr class="dropdown-divider" style="margin: 8px 0; opacity: 0.1;"></li>
+                                <li><h6 class="dropdown-header" style="font-size: 0.8rem; letter-spacing: 1px; color: #94a3b8; padding: 4px 20px;">WIDER MIDDLE EAST</h6></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-location-dot me-3" style="color: #f39223;"></i>Egypt</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="d-lg-none d-flex flex-column gap-2 mt-3 mb-2">
+                        <a href="book-search.html" class="btn-outline-green btn px-3 py-2 text-center" style="font-size: 14px;">BOOK SEARCH</a>
+                        <a href="book-a-demo.html" class="btn-orange btn px-3 py-2 text-center" style="font-size: 14px; color: white;">BOOK DEMO</a>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex gap-2">
+                    <a href="book-search.html" class="btn-outline-green btn px-3 py-2" style="font-size: 14px;">BOOK SEARCH</a>
+                    <a href="book-a-demo.html" class="btn-orange btn px-3 py-2" style="font-size: 14px; color: white;">BOOK DEMO</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero -->
+    <section class="page-hero" data-aos="fade-up">
+        <div class="container position-relative">
+            <div class="hero-3d-wireframe"><div class="shape"></div><div class="shape"></div><div class="shape"></div></div>
+            <h1 class="hero-title text-white mb-3">Frequently Asked Questions</h1>
+            <p class="text-white opacity-75 mb-4" style="max-width:560px;margin:0 auto;font-size:1.1rem;line-height:1.7;">Everything you need to know about GulfTP &mdash; the GCC region&#x27;s premier transfer pricing benchmarking database.</p>
+            <div class="breadcrumb-text"><a href="index.html">Home</a> / FAQ</div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Sidebar -->
+                <div class="col-lg-3 d-none d-lg-block" data-aos="fade-right">
+                    <div class="faq-categories d-flex flex-column gap-2 sticky-top" style="top:100px;">
+                        <p class="text-uppercase fw-bold mb-2" style="font-size:0.75rem;letter-spacing:1.5px;color:#94a3b8;">Browse Topics</p>
+                        <a href="#general" class="cat-pill active"><i class="fa-solid fa-circle-info cat-icon-green"></i> General</a>
+                        <a href="#coverage" class="cat-pill"><i class="fa-solid fa-globe cat-icon-orange"></i> Coverage</a>
+                        <a href="#databases" class="cat-pill"><i class="fa-solid fa-database cat-icon-green"></i> Databases</a>
+                        <a href="#process" class="cat-pill"><i class="fa-solid fa-gears cat-icon-orange"></i> Process</a>
+                        <a href="#access" class="cat-pill"><i class="fa-solid fa-key cat-icon-green"></i> Access &amp; Plans</a>
+                        <a href="#contact-faq" class="cat-pill"><i class="fa-solid fa-headset cat-icon-orange"></i> Contact</a>
+                        <div class="mt-4 p-4 rounded-3" style="background:linear-gradient(135deg,var(--primary-green) 0%,#0d5c3a 100%);color:white;">
+                            <p class="fw-bold mb-2" style="font-size:0.95rem;">Still have questions?</p>
+                            <p class="opacity-75 mb-3" style="font-size:0.85rem;">Our specialists are ready to help.</p>
+                            <a href="contact.html" class="btn btn-sm w-100" style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.3);border-radius:8px;font-size:0.85rem;">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion -->
+                <div class="col-lg-9">
+                    <!-- GENERAL -->
+                    <div id="general" class="mb-5" data-aos="fade-up">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-green),#0d7a50);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-circle-info text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">General</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionGeneral">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"><span class="faq-q-num">1</span> What is GulfTP?</button></h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">GulfTP is a transfer pricing benchmarking database built specifically for the GCC region, giving multinational enterprises and tax professionals access to over <strong>100,000 comparable companies</strong> for their compliance work.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"><span class="faq-q-num">2</span> Who is GulfTP for?</button></h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">GulfTP is built for <strong>multinational enterprises, tax professionals, and transfer pricing advisors</strong> operating in or serving the GCC region.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COVERAGE -->
+                    <div id="coverage" class="mb-5" data-aos="fade-up" data-aos-delay="50">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-orange),#e07b0a);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-globe text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">Coverage</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionCoverage">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"><span class="faq-q-num faq-q-num-orange">3</span> Which countries does GulfTP cover?</button></h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionCoverage">
+                                    <div class="accordion-body">GulfTP covers six GCC and regional markets: <strong>UAE, Saudi Arabia, Qatar, Bahrain, Egypt,</strong> and <strong>Oman</strong>.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DATABASES -->
+                    <div id="databases" class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-green),#0d7a50);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-database text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">Databases</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionDatabases">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"><span class="faq-q-num">4</span> What databases does GulfTP offer?</button></h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionDatabases">
+                                    <div class="accordion-body">GulfTP offers four specialised databases: the <strong>Gulf Company Database</strong>, <strong>Interest Rates Database</strong>, <strong>Services Database</strong>, and <strong>IP Licensing Database</strong>.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"><span class="faq-q-num">5</span> What is the Gulf Company Database used for?</button></h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionDatabases">
+                                    <div class="accordion-body">It provides <strong>comparable company data</strong> for general transfer pricing benchmarking across the GCC region.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6"><span class="faq-q-num">6</span> What is the Interest Rates Database used for?</button></h3>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionDatabases">
+                                    <div class="accordion-body">It provides reliable data for <strong>benchmarking intercompany loans and financing arrangements</strong> across the Gulf.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7"><span class="faq-q-num">7</span> What is the Services Database used for?</button></h3>
+                                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionDatabases">
+                                    <div class="accordion-body">It supports benchmarking of <strong>intra-group service transactions</strong>.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8"><span class="faq-q-num">8</span> What is the IP Licensing Database used for?</button></h3>
+                                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionDatabases">
+                                    <div class="accordion-body">It supports benchmarking of <strong>royalty arrangements and intellectual property licensing agreements</strong>.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROCESS -->
+                    <div id="process" class="mb-5" data-aos="fade-up" data-aos-delay="150">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-orange),#e07b0a);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-gears text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">Process</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionProcess">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9"><span class="faq-q-num faq-q-num-orange">9</span> How does GulfTP&#x27;s benchmarking process work?</button></h3>
+                                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#accordionProcess">
+                                    <div class="accordion-body">It follows a four-step process: (1) <strong>Select your database</strong>, (2) <strong>Apply filters</strong> such as industry, company size, and location, (3) <strong>Analyze the comparable data</strong>, then (4) <strong>Export a report</strong> for your documentation.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10"><span class="faq-q-num faq-q-num-orange">10</span> How do I request a benchmark search?</button></h3>
+                                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#accordionProcess">
+                                    <div class="accordion-body">You can book a search directly through the <a href="book-search.html" style="color:var(--primary-green);">Book Search</a> option, request a custom GCC-specific benchmark, or schedule a one-on-one consultation with a specialist.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCESS -->
+                    <div id="access" class="mb-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-green),#0d7a50);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-key text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">Access &amp; Plans</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionAccess">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11"><span class="faq-q-num">11</span> Can I get ongoing access instead of a one-time search?</button></h3>
+                                <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#accordionAccess">
+                                    <div class="accordion-body">Yes. GulfTP offers a <strong>subscription option for full database access</strong> as an alternative to a single custom search. Visit the <a href="buy-subscription.html" style="color:var(--primary-green);">Buy Subscription</a> page to learn more.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12"><span class="faq-q-num">12</span> Can I refresh an existing benchmark search?</button></h3>
+                                <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#accordionAccess">
+                                    <div class="accordion-body">Yes, GulfTP offers an <strong>Update Search service</strong> to refresh existing benchmark data with the latest available comparables. Visit the <a href="update-a-search.html" style="color:var(--primary-green);">Update a Search</a> page.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div id="contact-faq" class="mb-5" data-aos="fade-up" data-aos-delay="250">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary-orange),#e07b0a);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-headset text-white" style="font-size:1.1rem;"></i></div>
+                            <h2 style="font-size:1.4rem;font-weight:700;color:#1a2b22;margin:0;">Contact</h2>
+                        </div>
+                        <div class="accordion faq-accordion" id="accordionContact">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13"><span class="faq-q-num faq-q-num-orange">13</span> How do I contact GulfTP?</button></h3>
+                                <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#accordionContact">
+                                    <div class="accordion-body">You can reach GulfTP at <a href="mailto:connect@gulftp.com" style="color:var(--primary-green);font-weight:600;">connect@gulftp.com</a> or through the <a href="contact.html" style="color:var(--primary-green);">Contact Us</a> page. Our team is happy to assist with any enquiries.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="faq-cta" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-white fw-bold mb-3" style="font-size:1.6rem;">Still have questions?</h3>
+                        <p class="text-white opacity-75 mb-4" style="max-width:480px;margin:0 auto 24px;font-size:1rem;line-height:1.7;">Our transfer pricing specialists are on hand to answer your questions and help you get started with the right solution.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="contact.html" class="btn btn-orange px-4 py-2" style="color:white;font-size:0.95rem;"><i class="fa-solid fa-envelope me-2"></i> Contact Us</a>
+                            <a href="book-a-demo.html" class="btn px-4 py-2" style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.35);border-radius:8px;font-size:0.95rem;"><i class="fa-solid fa-calendar-check me-2"></i> Book a Demo</a>
+                        </div>
+                    </div>
+
+                </div><!-- /col-lg-9 -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer position-relative">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="var(--primary-green)"/>
+            </svg>
+        </div>
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4"><img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height:55px;object-fit:contain;"></a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form class="newsletter-form position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" name="email" required>
+                            <button class="btn footer-submit-btn" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="book-a-demo.html" class="footer-link">Book a Demo</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+                <div data-aos="fade-up" class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:connect@gulftp.com">connect@gulftp.com</a></p>
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">&copy; 2026 GulfTP. All Rights Reserved. Built for the Future.</div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module('gulfApp', []);
+        app.controller('MainController', function($scope) {});
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+            document.querySelectorAll('.faq-categories .cat-pill').forEach(function(pill) {
+                pill.addEventListener('click', function() {
+                    document.querySelectorAll('.faq-categories .cat-pill').forEach(function(p) { p.classList.remove('active'); });
+                    pill.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
